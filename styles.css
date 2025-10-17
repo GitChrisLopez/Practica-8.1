@@ -146,6 +146,9 @@ main {
   display: none;
 }
 
+
+
+/*Vista en celular*/
 @media (min-width: 700px) {
   .songs-header {
     display: flex;
@@ -211,4 +214,5 @@ main {
   .song-row {
     padding: 0px;
   }
+
 }
