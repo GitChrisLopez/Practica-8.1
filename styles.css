@@ -146,7 +146,9 @@ main {
   display: none;
 }
 
-
+.sidebar-nav {
+  display: none;
+}
 
 /*Vista en celular*/
 @media (min-width: 700px) {
@@ -215,4 +217,84 @@ main {
     padding: 0px;
   }
 
+  .sidebar-nav {
+    display: block;
+  }
+
+  .sidebar-title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: rgb(145, 146, 154);
+    padding: 10px 10px 10px 10px;
+    line-height: 1em;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .sidebar-p {
+    font-size: 1rem;
+    padding: 10px 10px 10px 10px;
+    line-height: 3em;
+  }
+
+  .sidebar-nav:hover,
+  nav.sidebar-nav.expanded {
+    width: 260px;
+    overflow: visible;
+  }
+
+  .sidebar-nav {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.2s ease;
+    z-index: 1000;
+  }
+
+  .sidebar-nav > ul {
+    margin: 7px 0;
+  }
+
+  .sidebar-nav li {
+    position: relative;
+    display: block;
+    width: 250px;
+  }
+
+  .list-li {
+    display: block;
+    background-color: var(--darker-gray);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 8px 15px;
+    line-height: 1.5em;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.1s;
+    font-size: 16px;
+  }
+
+  .list-li:hover {
+    background-color: var(--gray);
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+
+  .sidebar-nav .sidebar-title,
+  .sidebar-nav .sidebar-p,
+  .sidebar-nav ul {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s ease, visibility 0.1s ease;
+  }
+
+  .sidebar-nav:hover .sidebar-title,
+  .sidebar-nav:hover .sidebar-p,
+  .sidebar-nav:hover ul {
+    opacity: 1;
+    visibility: visible;
+  }
 }
